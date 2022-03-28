@@ -58,7 +58,7 @@ def get_libs(bam, is_sam, header_only):
 
     # print
     for lib in lib_rg:
-        print ','.join(lib_rg[lib])
+        print(','.join(lib_rg[lib]))
     in_bam.close()
 
     return
@@ -77,6 +77,6 @@ def main():
 if __name__ == '__main__':
     try:
         sys.exit(main())
-    except IOError, e:
+    except IOError as e:
         if e.errno != 32:  # ignore SIGPIPE
             raise
