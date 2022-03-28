@@ -125,7 +125,7 @@ def main():
 if __name__ == "__main__":
     try:
         sys.exit(main())
-    except IOError, e:
+    except IOError as e:
         if e.errno != 32:  # ignore SIGPIPE
             raise
     
