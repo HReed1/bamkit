@@ -107,11 +107,11 @@ def bam_clean(bam, is_sam, header_only):
 
     # out_bam = pysam.Samfile('-', 'w', template=in_bam)
 
-    print get_clean_header(in_bam)
+    print(get_clean_header(in_bam))
 
     if not header_only:
         for al in in_bam:
-            print al
+            print(al)
 
     # # this code leads to pipeing errors
     # if not header_only:
@@ -140,6 +140,6 @@ def main():
 if __name__ == '__main__':
     try:
         sys.exit(main())
-    except IOError, e:
+    except IOError as e:
         if e.errno != 32:  # ignore SIGPIPE
             raise
